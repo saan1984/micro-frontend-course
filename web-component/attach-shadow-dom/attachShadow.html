@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attach Shadow DOM</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var demoElement = document.getElementById('demo');
+        console.log(demoElement);
+        var shadowDOM = demoElement.attachShadow({mode: 'open'});
+        var spanElement = document.createElement('span');
+        spanElement.textContent = "Welcome to Web Component";
+        shadowDOM.appendChild(spanElement)
+    </script>
+</body>
+</html>
